@@ -1,0 +1,151 @@
+.footer {
+  background-color: $tertiary-bg-color;
+  color: $secondary-text-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .sub-container:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.contacts {
+  width: 270px;
+
+  .logo-link {
+    color: $secondary-text-color;
+  }
+}
+
+.footer-contacts {
+  font-style: normal;
+  margin-top: 20px;
+
+  .text {
+    margin-bottom: 9px;
+  }
+
+  .link {
+    color: $secondary-text-color-alfa;
+    transition: color 250ms $timing-function;
+
+    &:not(:last-child) {
+      display: inline-block;
+      margin-bottom: 9px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.social {
+  width: 270px;
+  padding-top: 12px;
+
+  .text {
+    line-height: 1.14;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .link-list {
+    display: flex;
+  }
+
+  .item-link:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .social-link {
+    display: flex;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+  }
+
+  .icon-footer {
+    fill: $primary-bg-color;
+    width: 20px;
+    height: 20px;
+    transition: fill 250ms $timing-function;
+  }
+}
+
+.subscription {
+  padding-top: 12px;
+  width: 570px;
+
+  .text {
+    line-height: 1.14;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .subscription-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  input {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: $tertiary-bg-color;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: $secondary-text-color-alfa;
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      color: $secondary-text-color-alfa;
+    }
+  }
+
+  button {
+    background-color: $accent-color;
+    color: $secondary-text-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    padding-left: 29px;
+    padding-right: 28px;
+    height: 50px;
+    border-style: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      margin-left: 10px;
+      width: 24px;
+      height: 24px;
+      background-image: url(../images/subscript.svg);
+    }
+  }
+}

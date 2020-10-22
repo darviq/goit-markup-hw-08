@@ -1,0 +1,107 @@
+.header {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid $secondary-bg-color;
+  position: relative;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+
+  .logo-link {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    color: $title-text-color;
+    transition: color 250ms $timing-function;
+  }
+}
+
+.nav-list {
+  display: flex;
+
+  .item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  .link {
+    color: $title-text-color;
+    transition: color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  .active {
+    color: $accent-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: -1px;
+      height: 4px;
+      width: 100%;
+      border-radius: 2px;
+      background-color: $accent-color;
+    }
+  }
+}
+
+.header-contacts {
+  font-style: normal;
+  display: flex;
+
+  .link {
+    color: $primary-text-color;
+    display: flex;
+    align-items: center;
+    transition: color 250ms $timing-function;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      fill: $accent-color;
+    }
+  }
+
+  svg {
+    fill: $primary-text-color;
+    margin-right: 10px;
+    transition: fill 250ms $timing-function;
+  }
+
+  .envelope {
+    width: 16px;
+    height: 12px;
+  }
+
+  .smartphone {
+    width: 10px;
+    height: 16px;
+  }
+}

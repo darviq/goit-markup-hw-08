@@ -1,0 +1,75 @@
+.clients-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  .title {
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .company {
+    width: calc((100% - 5 * 30px) / 6);
+    height: 90px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: border-color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      border-color: $accent-color;
+    }
+  }
+}
+
+.company svg {
+  fill: #afb1b8;
+  transition: fill 250ms $timing-function;
+}
+
+.company:hover svg,
+.company:focus svg {
+  fill: $accent-color;
+}
+
+.company-01 svg {
+  width: 44.27px;
+  height: 49.23px;
+}
+
+.company-02 svg {
+  width: 40px;
+  height: 52px;
+}
+
+.company-03 svg {
+  width: 41px;
+  height: 42.6px;
+}
+
+.company-04 svg {
+  width: 79.66px;
+  height: 42.02px;
+}
+
+.company-05 svg {
+  width: 59px;
+  height: 47px;
+}
+
+.company-06 svg {
+  width: 88.48px;
+  height: 45.44px;
+}
