@@ -1,3 +1,45 @@
+.footer {
+  background-color: $tertiary-bg-color;
+  color: $secondary-text-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    .tablet-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      @media screen and (min-width: 768px) {
+        flex-direction: row;
+      }
+
+      @media screen and (max-width: 1199px) {
+        margin-bottom: 60px;
+        justify-content: space-around;
+      }
+    }
+
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
+  }
+
+  .sub-container:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
 /*
 .footer {
   background-color: $tertiary-bg-color;
@@ -14,15 +56,55 @@
     margin-right: 30px;
   }
 }
+*/
 
+.contacts {
+  .logo-link {
+    color: $secondary-text-color;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
+}
+
+/*
 .contacts {
   width: 270px;
 
   .logo-link {
     color: $secondary-text-color;
   }
+} 
+*/
+
+.footer-contacts {
+  font-style: normal;
+
+  .text {
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .link {
+    color: $secondary-text-color-alfa;
+    transition: color 250ms $timing-function;
+
+    &:not(:last-child) {
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
 }
 
+/*
 .footer-contacts {
   font-style: normal;
   margin-top: 20px;
@@ -46,7 +128,54 @@
     }
   }
 }
+*/
 
+.social {
+  @media screen and (min-width: 768px) {
+    padding-top: 5px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 12px;
+  }
+
+  .text {
+    line-height: 1.14;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .link-list {
+    display: inline-flex;
+  }
+
+  .item-link:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .social-link {
+    display: flex;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+  }
+
+  .icon-footer {
+    fill: $primary-bg-color;
+    width: 20px;
+    height: 20px;
+    transition: fill 250ms $timing-function;
+  }
+}
+
+/*
 .social {
   width: 270px;
   padding-top: 12px;
@@ -86,7 +215,93 @@
     transition: fill 250ms $timing-function;
   }
 }
+*/
 
+.subscription {
+  .text {
+    line-height: 1.14;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .subscription-form {
+    display: inline-block;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+
+  input {
+    display: block;
+    width: 450px;
+    height: 50px;
+    padding: 15px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: $tertiary-bg-color;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: $secondary-text-color-alfa;
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      color: $secondary-text-color-alfa;
+    }
+
+    @media screen and (max-width: 1199px) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-right: 12px;
+    }
+  }
+
+  button {
+    background-color: $accent-color;
+    color: $secondary-text-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    padding-left: 29px;
+    padding-right: 28px;
+    height: 50px;
+    border-style: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      margin-left: 10px;
+      width: 24px;
+      height: 24px;
+      background-image: url(../images/subscript.svg);
+    }
+
+    @media screen and (max-width: 1199px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 12px;
+  }
+}
+
+/*
 .subscription {
   padding-top: 12px;
   width: 570px;
