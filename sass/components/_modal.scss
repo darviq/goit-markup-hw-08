@@ -1,3 +1,4 @@
+/*
 .backdrop {
   position: fixed;
   top: 0;
@@ -172,7 +173,7 @@
 
   input {
     position: absolute !important;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
     padding: 0 !important;
     border: 0 !important;
@@ -201,3 +202,4 @@
     color: $accent-color;
   }
 }
+*/
