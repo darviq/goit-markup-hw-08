@@ -10,12 +10,13 @@ body {
   color: $primary-text-color;
   font-family: $primary-font-family;
   font-size: 14px;
-  line-height: 1.71; /* 24px */
+  line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
 img {
   display: block;
+  width: 100%;
 }
 
 .list {

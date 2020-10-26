@@ -1,7 +1,11 @@
-/*
 .work-description-section {
+  display: none;
   padding-top: 94px;
   padding-bottom: 94px;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 
   .title {
     color: $title-text-color;
@@ -36,4 +40,3 @@
     bottom: 0;
   }
 }
-*/

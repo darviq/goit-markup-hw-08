@@ -23,6 +23,10 @@
   border: none;
   background-color: transparent;
 
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
   .icon-cross {
     display: none;
   }
@@ -36,10 +40,6 @@
       display: none;
     }
   }
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
 }
 
 .menu-container {
@@ -50,13 +50,10 @@
   letter-spacing: 0.02em;
   background-color: $primary-bg-color;
 
-  &.is-open {
-    display: block;
-  }
-
   @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
+    z-index: 2;
     top: 100%;
     left: 0;
     width: 100%;
@@ -64,6 +61,10 @@
       0px 1px 3px rgba(0, 0, 0, 0.16);
     padding-top: 60px;
     padding-bottom: 60px;
+
+    &.is-open {
+      display: block;
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -99,22 +100,20 @@
   }
 
   .item {
-    &:not(:last-child) {
-      @media screen and (max-width: 767px) {
-        margin-bottom: 40px;
-      }
-    }
-
-    &:not(:last-child) {
-      @media screen and (min-width: 768px) {
-        margin-right: 50px;
-      }
-    }
-
     @media screen and (min-width: 768px) {
       padding-top: 32px;
       padding-bottom: 32px;
       position: relative;
+    }
+
+    &:not(:last-child) {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 40px;
+      }
+
+      @media screen and (min-width: 768px) {
+        margin-right: 50px;
+      }
     }
   }
 
@@ -131,6 +130,11 @@
   .active {
     color: $accent-color;
     display: inline-block;
+
+    @media screen and (max-width: 767px) {
+      padding-bottom: 12px;
+      position: relative;
+    }
 
     &::after {
       content: "";
@@ -150,22 +154,30 @@
         bottom: -1px;
       }
     }
-
-    @media screen and (max-width: 767px) {
-      padding-bottom: 12px;
-      position: relative;
-    }
   }
 }
 
 .header-contacts {
   display: inline-block;
 
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+
   .link {
     color: $primary-text-color;
     display: flex;
     align-items: center;
     transition: color 250ms $timing-function;
+
+    @media screen and (max-width: 767px) {
+      justify-content: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: inline-flex;
+    }
 
     &:not(:last-child) {
       @media screen and (max-width: 767px) {
@@ -189,14 +201,6 @@
     &:hover svg,
     &:focus svg {
       fill: $accent-color;
-    }
-
-    @media screen and (max-width: 767px) {
-      justify-content: center;
-    }
-
-    @media screen and (min-width: 1200px) {
-      display: inline-flex;
     }
   }
 
@@ -239,119 +243,4 @@
       height: 16px;
     }
   }
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    font-size: 12px;
-    line-height: 1.17;
-  }
 }
-
-/*
-.header {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  border-bottom: 1px solid $secondary-bg-color;
-  position: relative;
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo-link {
-    margin-right: 93px;
-    padding-top: 24px;
-    padding-bottom: 25px;
-    color: $title-text-color;
-    transition: color 250ms $timing-function;
-  }
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav-list {
-  display: flex;
-
-  .item {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    position: relative;
-
-    &:not(:last-child) {
-      margin-right: 50px;
-    }
-  }
-
-  .link {
-    color: $title-text-color;
-    transition: color 250ms $timing-function;
-
-    &:hover,
-    &:focus {
-      color: $accent-color;
-    }
-  }
-
-  .active {
-    color: $accent-color;
-
-    &::after {
-      content: "";
-      position: absolute;
-      display: block;
-      bottom: -1px;
-      height: 4px;
-      width: 100%;
-      border-radius: 2px;
-      background-color: $accent-color;
-    }
-  }
-}
-
-.header-contacts {
-  font-style: normal;
-  display: flex;
-
-  .link {
-    color: $primary-text-color;
-    display: flex;
-    align-items: center;
-    transition: color 250ms $timing-function;
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-
-    &:hover,
-    &:focus {
-      color: $accent-color;
-    }
-
-    &:hover svg,
-    &:focus svg {
-      fill: $accent-color;
-    }
-  }
-
-  svg {
-    fill: $primary-text-color;
-    margin-right: 10px;
-    transition: fill 250ms $timing-function;
-  }
-
-  .envelope {
-    width: 16px;
-    height: 12px;
-  }
-
-  .smartphone {
-    width: 10px;
-    height: 16px;
-  }
-}
-*/
